@@ -1,0 +1,38 @@
+.gallery-section {
+  display: flex;
+
+  @media (max-width:800px) {
+    flex-wrap: wrap;
+  }
+
+  .gallery-block {
+    width: calc(100%/4);
+
+    @media (max-width:800px) {
+      width: calc(100%/2);
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0;
+
+      @media (max-width: 799px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .desktop-img {
+    @media (max-width: 799px) {
+      display: none;
+    }
+  }
+
+  .mobile-img {
+    display: none;
+
+    @media (max-width:799px) {
+      display: block;
+    }
+  }
+}

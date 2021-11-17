@@ -1,0 +1,226 @@
+.grid-section {
+  width: 100%;
+}
+
+.grid-row {
+  display: flex;
+
+  @media (max-width: 800px) {
+    text-align: center;
+  }
+
+  .grid-title {
+    margin: 0 0 32px;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.285714px;
+    color: $neutralColor1;
+
+
+    @media (max-width: 1024px) {
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: -0.228571px;
+    }
+  }
+
+  .grid-text {
+    margin: 0 0 40px;
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+
+    letter-spacing: -0.128571px;
+    color: $neutralColor3;
+
+  }
+
+  .grid-link {
+    position: relative;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 25px;
+    /* identical to box height, or 167% */
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $neutralColor1;
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 10px;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+      border-radius: 28px;
+      transition: opacity .3s ease-in-out;
+      z-index: 1;
+    }
+  }
+
+  .grid-block {
+    width: 50%;
+  }
+}
+
+.row1 {
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
+
+  .left-grid {
+    padding: 9% 110px 9% 9%;
+
+    @media (max-width: 800px) {
+      padding: 64px 24px;
+      width: 100%;
+    }
+  }
+
+  .right-grid {
+    padding: 18%;
+    background: url('../assets/img/desktop/image-transform.jpg') no-repeat center center;
+    background-size: cover;
+
+    @media (max-width: 800px) {
+      padding: 42%;
+      width: 100%;
+      background: url('../assets/img/mobile/image-transform.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .grid-link:before {
+    background: $primaryColor2;
+  }
+}
+
+.row2 {
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  .right-grid {
+    padding: 9% 110px 9% 9%;
+
+    @media (max-width: 800px) {
+      padding: 64px 24px;
+      width: 100%;
+    }
+  }
+
+  .left-grid {
+    padding: 18%;
+    background: url('../assets/img/desktop/image-stand-out.jpg') no-repeat center center;
+    background-size: cover;
+
+
+    @media (max-width: 800px) {
+      padding: 42%;
+      width: 100%;
+      background: url('../assets/img/mobile/image-stand-out.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .grid-link:before {
+    background: $primaryColor1;
+  }
+}
+
+.row3 {
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  .grid-block {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  .grid-title {
+    margin: 0 0 27px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 35px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.2px;
+  }
+
+  .grid-text {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    /* or 169% */
+
+    text-align: center;
+    letter-spacing: -0.114286px;
+  }
+
+  .grid-content {
+    padding: 46% 23% 59px;
+
+    @media (max-width: 1200px) {
+      padding: 54% 23% 50px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 70% 23% 30px;
+    }
+
+    @media (max-width: 800px) {
+      padding: 400px 24px 59px;
+    }
+  }
+
+  .left-grid {
+    background: url('../assets/img/desktop/image-graphic-design.jpg') no-repeat center center;
+    background-size: cover;
+
+    .grid-text,
+    .grid-title{
+      color: $primaryColor3;
+    }
+  }
+
+  .right-grid {
+    background: url('../assets/img/desktop/image-photography.jpg') no-repeat center center;
+    background-size: cover;
+
+    .grid-text,
+    .grid-title{
+      color: $primaryColor4;
+    }
+  }
+}

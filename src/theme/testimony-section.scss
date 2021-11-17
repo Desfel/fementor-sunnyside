@@ -1,0 +1,125 @@
+.testimony-section {
+  padding: 160px 165px;
+  width: 100%;
+
+  @media (max-width: 1150px) {
+    padding: 100px 105px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 64px 66px;
+  }
+
+  @media (max-width: 800px) {
+    padding: 64px 24px;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 5px;
+    color: $neutralColor4;
+
+    @media (max-width: 800px) {
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+
+      text-align: center;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+.testimonies-wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimony {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 550px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @media (max-width: 800px) {
+        margin: 0 0 64px;
+      }
+    }
+
+    img {
+      margin:0 auto;
+      border-radius: 50%;
+      width: 72px;
+    }
+
+    .testimony-content {
+      margin: 58px 0 69px;
+      font-style: normal;
+      font-family: $textFont;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+      /* or 178% */
+
+      text-align: center;
+      letter-spacing: -0.128571px;
+      color: $neutralColor2;
+
+      @media (max-width: 800px) {
+        margin: 32px 0;
+      }
+    }
+
+    .author-content {
+      margin-top: auto;
+    }
+
+    .testimony-author {
+      margin: 0 0 10px;
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: -0.128571px;
+      color: $neutralColor1;
+    }
+
+    .author-job {
+      margin: 0;
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 25px;
+      /* identical to box height, or 179% */
+
+      text-align: center;
+      letter-spacing: -0.1px;
+      color: $neutralColor4;
+    }
+  }
+}

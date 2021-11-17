@@ -1,0 +1,51 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 72px 40px;
+  width: 100%;
+  background: $footerColor;
+}
+
+.footer-nav {
+  margin: 40px 0 88px;
+
+  a {
+    font-family: $textFont;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height, or 139% */
+
+    letter-spacing: -0.128571px;
+    color: $primaryColor3;
+    transition: color .3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 57px;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.footer-social {
+  a {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+
+    svg path {
+      transition: fill .3s ease-in-out;
+    }
+
+    &:hover {
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+}
